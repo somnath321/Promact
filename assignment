@@ -1,0 +1,227 @@
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/USER/Desktop/Promact Assignment/.git/
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1.txt.txt
+        new file:   2.txt.txt
+        new file:   3.txt.txt
+        new file:   4.txt.txt
+        new file:   5.txt.txt
+
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git add new file
+fatal: pathspec 'new' did not match any files
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git add *
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git commit 1.txt
+error: pathspec '1.txt' did not match any file(s) known to git
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git commit 1.txt.txt
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'USER@DESKTOP-FE98J9Q.(none)')
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git config user.name "somnath"
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git config user.email "somnath29197@gmail.com"
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git add *
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git commit -m "something"
+[master (root-commit) 1ca1ff9] something
+ 5 files changed, 5 insertions(+)
+ create mode 100644 1.txt.txt
+ create mode 100644 2.txt.txt
+ create mode 100644 3.txt.txt
+ create mode 100644 4.txt.txt
+ create mode 100644 5.txt.txt
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git rm --cached <1.txt>
+bash: syntax error near unexpected token `newline'
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git rm --cached <promact assignment>
+bash: syntax error near unexpected token `newline'
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git rm --cached <newline>
+bash: syntax error near unexpected token `newline'
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git checkout -b author
+Switched to a new branch 'author'
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (author)
+$ git mv oldfile_name newfile_name
+fatal: bad source, source=oldfile_name, destination=newfile_name
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (author)
+$ git mv 1.txt yoda.txt
+fatal: bad source, source=1.txt, destination=yoda.txt
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (author)
+$ git mv 1.txt.txt yoda.txt
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (author)
+$ git mv 2.txt.txt godfather.txt
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (author)
+$ git mv 3.txt.txt shawshank.txt
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (author)
+$ git mv 4.txt.txt batman.txt
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (author)
+$ git mv 5.txt.txt vader.txt
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (author)
+$ git status
+On branch author
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    4.txt.txt -> batman.txt
+        renamed:    2.txt.txt -> godfather.txt
+        renamed:    3.txt.txt -> shawshank.txt
+        renamed:    5.txt.txt -> vader.txt
+        renamed:    1.txt.txt -> yoda.txt
+
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (author)
+$ git merge author to master
+merge: to - not something we can merge
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (author)
+$ git merge master
+Already up to date.
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (author)
+$ git checkout master
+Switched to branch 'master'
+D       1.txt.txt
+D       2.txt.txt
+D       3.txt.txt
+D       4.txt.txt
+D       5.txt.txt
+A       batman.txt
+A       godfather.txt
+A       shawshank.txt
+A       vader.txt
+A       yoda.txt
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git merge author to master
+merge: to - not something we can merge
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git merge merges
+merge: merges - not something we can merge
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git mv master yoda.txt
+fatal: bad source, source=master, destination=yoda.txt
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ cherry pick
+bash: cherry: command not found
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ cherry-pick
+bash: cherry-pick: command not found
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ cherry -pick
+bash: cherry: command not found
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git remote add mster yoda.txt
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git push No try there is, do or do not
+error: src refspec try does not match any
+error: src refspec there does not match any
+error: src refspec is, does not match any
+error: src refspec do does not match any
+error: src refspec or does not match any
+error: src refspec do does not match any
+error: src refspec not does not match any
+error: failed to push some refs to 'No'
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git push "No try there is, do or do not"
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream No try there is, do or do not master
+
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git push --set-upstream
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git push --set-upstream "No try, there is, do or do not'
+> Do or do not, there is no try
+> git commit
+>
+> ^C
+
+USER@DESKTOP-FE98J9Q MINGW64 ~/Desktop/Promact Assignment (master)
+$ git commit -m "master"
+[master 2927248] master
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ rename 4.txt.txt => batman.txt (100%)
+ rename 2.txt.txt => godfather.txt (100%)
+ rename 3.txt.txt => shawshank.txt (100%)
+ rename 5.txt.txt => vader.txt (100%)
+ rename 1.txt.txt => yoda.txt (100%)
+
